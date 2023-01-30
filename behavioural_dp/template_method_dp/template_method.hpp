@@ -1,0 +1,30 @@
+#include <iostream>
+
+class Sort
+{
+public:
+    virtual void processData() final
+    { // (4)
+        readData();
+        sortData();
+        writeData();
+    }
+    virtual ~Sort() = default;
+
+private:
+    virtual void readData() {}   // (1)
+    virtual void sortData() = 0; // (2)
+    virtual void writeData() {}  // (3)
+};
+
+class QuickSort : public Sort
+{
+    void readData() override { std::cout << "readData" << '\n'; }
+    void sortData() override { std::cout << "quick sortData" << '\n'; }
+    void writeData() override { std::cout << "writeData" << '\n'; }
+};
+
+class BubbleSort : public Sort
+{
+    void sortData() override { std::cout << "bubble sortData" << '\n'; }
+};

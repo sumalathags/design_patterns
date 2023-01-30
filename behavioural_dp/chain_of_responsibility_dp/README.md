@@ -1,0 +1,3 @@
+# Chain of Responsibility
+
+The Chain of Responsibility design pattern is a behavioral design pattern that allows objects in a program to process a request or command by passing it through a chain of objects. Each object in the chain has the opportunity to process the request or command, and the request is passed along the chain until it is handled. This pattern can be implemented in C++ by creating a base class or interface that defines the method for handling a request or command, and then creating subclasses or objects that implement this method. The objects in the chain can be linked together using pointers or references, and the request can be passed through the chain using a loop or recursion

@@ -1,0 +1,7 @@
+# vscode settings
+.vscode
+
+# binaries, compilable object files and libraries must be ignored
+*.a
+*.o
+*.out
